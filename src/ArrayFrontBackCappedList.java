@@ -4,6 +4,10 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedList<T> {
 
     public ArrayFrontBackCappedList(int capacity) {
         list = (T[]) new Object[capacity];
+        numberOfElements=0;
+        //Object[] objs = {2, 4, 6, 8, 9, null, null, null, null, null};
+        //this.list = (T[]) objs;
+        //this.numberOfElements = 5;
     }
 
     public String toString() {

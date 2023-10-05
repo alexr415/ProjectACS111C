@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class ProjectADriver {
 	
-	private static boolean testingPartOne = false, testingExtraCredit = false;
+	private static boolean testingPartOne = false, testingExtraCredit = true;
 	
 	private static FrontBackCappedList<Integer> list;
 
@@ -11,7 +11,7 @@ public class ProjectADriver {
 		
 		if(testingExtraCredit) {
 			/* IMPORTANT: set the testingExtraCredit variable to true AND un-comment the line below to test with the extra credit. */
-			// list = new ListFrontBackCappedList<Integer>(10);
+			list = new ListFrontBackCappedList<Integer>(10);
 			System.out.println("-----------------------------DRIVER BEING RUN WITH EXTRA CREDIT CLASS-----------------------------");
 			if(list instanceof ArrayFrontBackCappedList) {
 				System.err.println("Error! You must un-comment the line that lets you run this with the extra credit class.");
@@ -320,7 +320,7 @@ public class ProjectADriver {
 		System.out.println("\n-----------------------------TESTING WITH STRINGS-----------------------------");
 		FrontBackCappedList<String> wordList = new ArrayFrontBackCappedList<String>(20);
 		if(testingExtraCredit) {
-			//wordList = new ListFrontBackCappedList<String>(20);
+			wordList = new ListFrontBackCappedList<String>(20);
 		}
 		testAdd(wordList, AddRemovePosition.FRONT, new String[] {"job!", "Nice", "it!", "did", "You"}, true, "test with Strings");
 		testAdd(wordList, AddRemovePosition.BACK, new String[] {"You", "rock!"}, true, "test with Strings");
